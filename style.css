@@ -1,0 +1,253 @@
+:root{
+    --primary:#1e40af;      /* blue, main brand */
+    --primary-600:#1b399b;
+    --primary-700:#173081;
+    --accent:#0ea5e9;       /* light blue accent */
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+    --border:#e2e8f0;
+    --error:#b91c1c;
+    --success:#065f46;
+    --radius:14px;
+    --shadow:0 10px 25px rgba(2, 6, 23, 0.08);
+}
+
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: linear-gradient(180deg, #eef2ff, #f8fafc);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+    padding:32px;
+}
+
+.shell{
+    width:100%;
+    max-width:760px;
+}
+
+.brand{
+    background: #062860;
+    color:white;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    overflow: hidden;
+}
+
+#formBanner {
+    width: 100%;
+    height: auto;
+}
+
+.brand h1{
+    font-size:24px;
+    margin:0 0 6px 0;
+    letter-spacing:.3px;
+    font-weight:800;
+}
+.brand p{
+    margin:0;
+    opacity:.95;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-top:none;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding:28px;
+}
+
+.helper{
+    margin:-6px 0 18px 0;
+    color:var(--muted);
+    font-size:14px;
+}
+
+form{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:18px;
+}
+
+@media (min-width:720px){
+    form{
+    grid-template-columns: 1fr 1fr;
+    }
+    .full{
+    grid-column:1 / -1;
+    }
+}
+
+label{
+    display:block;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.required{
+    color:var(--primary);
+    margin-left:4px;
+}
+
+input[type="date"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(14,165,233,.12);
+    background: #ffffff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.7;
+    filter: invert(0.3);
+    transition: opacity 0.2s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#f8fafc;
+    outline:none;
+    transition: border .15s ease, box-shadow .15s ease;
+    font-size:16px;
+}
+
+textarea{
+    min-height:110px; 
+    resize:vertical
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 0 4px rgba(14,165,233,.12);
+    background:#ffffff;
+}
+
+.radio-row{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    padding:14px;
+    border:1px dashed var(--border);
+    border-radius:10px;
+    background:#f1f5ff;
+}
+
+.radio-option{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+}
+
+.consent{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#f9fbff;
+    font-size:14px;
+}
+.consent input{margin-top:2px}
+
+.actions{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+#OptInCheckBoxDiv {
+    margin-top: 20px;
+}
+
+button[type="submit"]{
+    background-color:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:800;
+    letter-spacing:.3px;
+    cursor:pointer;
+    font-size:16px;
+    transition: transform .05s ease, background-color .15s ease;
+    box-shadow: 0 6px 18px rgba(30,64,175,.25);
+}
+button[type="submit"]:hover{background:var(--primary-600)}
+button[type="submit"]:active{transform: translateY(1px)}
+.subcopy{
+    font-size:13px;
+    color:var(--muted);
+}
+
+.error-text{
+    color:var(--error);
+    font-size:13px;
+    margin-top:6px;
+    display:none;
+}
+
+.sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    white-space:nowrap;
+    border:0;
+}
+
+.notice{
+    display:none;
+    margin:0 0 8px 0;
+    padding:12px 14px;
+    border-radius:10px;
+    font-weight:600;
+}
+.notice.error{
+    background:#fee2e2;
+    color:#7f1d1d;
+    border:1px solid #fecaca;
+}
+.notice.success{
+    background:#dcfce7;
+    color:#14532d;
+    border:1px solid #bbf7d0;
+}
+
+/* Honeypot keeps bots quiet */
+.hp-wrap{
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    height:0;
+    width:0;
+    overflow:hidden;
+}
+
+a{color:var(--primary)}
+a:hover{text-decoration:none}

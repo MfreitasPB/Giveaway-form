@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Prospect Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+  <main class="shell" role="main" aria-labelledby="form-title">
+    <section class="brand">
+      <!-- 
+      <h1 id="form-title">Stay connected with Price Benowitz</h1>
+      <p>Get helpful updates, legal insights, and invitations straight to your inbox.</p>
+      -->
+      <img id="formBanner" src="banner nl 2-1.png" alt="Price Benowitz Banner">
+    </section>
+
+    <section class="card" aria-describedby="helper-text">
+      <p id="helper-text" class="helper">
+        Fill out the form, then choose your email preference below. Required fields are marked with a star.
+      </p>
+
+      <!-- messages for client side validation -->
+      <div id="form-error" class="notice error" role="alert" aria-live="polite"></div>
+      <div id="form-success" class="notice success" role="status" aria-live="polite"></div>
+
+      <form id="prospect-form" action="http://go.pricebenowitz.com/l/1095012/2025-10-22/7nzs1m" method="post" novalidate>
+        <!-- Honeypot -->
+        <div class="hp-wrap" aria-hidden="true">
+          <label for="website">Do not fill this field</label>
+          <input type="text" id="website" name="website"/>
+        </div>
+
+        <!-- First Name -->
+        <div class="field">
+          <label for="first-name">First Name <span class="required">*</span></label>
+          <input type="text" id="first-name" name="first_name" placeholder="First name" autocomplete="given-name" required/>
+          <p class="error-text" id="err-first-name">Please enter your first name.</p>
+        </div>
+
+        <!-- Last Name -->
+        <div class="field">
+          <label for="last-name">Last Name <span class="required">*</span></label>
+          <input type="text" id="last-name" name="last_name" placeholder="Last name" autocomplete="family-name" required/>
+          <p class="error-text" id="err-last-name">Please enter your last name.</p>
+        </div>
+
+        <!-- Email -->
+        <div class="field full">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required/>
+          <p class="error-text" id="err-email">Please enter a valid email address.</p>
+        </div>
+
+        <div class="field full">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone"/>
+        </div>
+
+        <!-- Consent -->
+        <div id="OptInCheckBoxDiv" class="field full">
+          <label class="sr-only" for="consent">Consent to receive email</label>
+          <div class="consent">
+            <input type="checkbox" id="consent" required/>
+            <div>
+              I agree to receive communications from Price Benowitz about services and events. I can unsubscribe at any time. See our
+              <a href="#" target="_blank" rel="noopener">Privacy Notice</a>.
+              <div class="subcopy">Thank you for taking the time to connect with Price Benowitz!</div>
+            </div>
+          </div>
+          <p class="error-text" id="err-consent">Please confirm consent to proceed.</p>
+        </div>
+
+        <!-- Helpful hidden fields you can map in Account Engagement -->
+        <input type="hidden" name="source" value="Website Lead"/>
+        <input type="hidden" name="campaign" value="General Newsletter"/>
+
+        <div class="actions full">
+          <button type="submit" aria-label="Submit form">Submit</button>
+          <span class="subcopy">By submitting, you acknowledge our terms and privacy notice.</span>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
