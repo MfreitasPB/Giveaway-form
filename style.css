@@ -34,7 +34,7 @@ body{
 }
 
 .brand{
-    background: #062860;
+    background-color: #062860;
     color:white;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
@@ -58,7 +58,7 @@ body{
 }
 
 .card{
-    background:var(--card);
+    background-color:var(--card);
     border:1px solid var(--border);
     border-top:none;
     border-bottom-left-radius: var(--radius);
@@ -106,7 +106,7 @@ label, button {
 input[type="date"]:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 4px rgba(14,165,233,.12);
-    background: #ffffff;
+    background-color: #ffffff;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -131,7 +131,7 @@ textarea{
     padding:12px 14px;
     border:1px solid var(--border);
     border-radius:10px;
-    background:#f8fafc;
+    background-color:#f8fafc;
     outline:none;
     transition: border .15s ease, box-shadow .15s ease;
     font-size:16px;
@@ -145,7 +145,7 @@ textarea{
 input:focus, select:focus, textarea:focus{
     border-color:var(--accent);
     box-shadow:0 0 0 4px rgba(14,165,233,.12);
-    background:#ffffff;
+    background-color:#ffffff;
 }
 
 .radio-row{
@@ -155,7 +155,7 @@ input:focus, select:focus, textarea:focus{
     padding:14px;
     border:1px dashed var(--border);
     border-radius:10px;
-    background:#f1f5ff;
+    background-color:#f1f5ff;
 }
 
 .radio-option{
@@ -172,7 +172,7 @@ input:focus, select:focus, textarea:focus{
     padding:12px 14px;
     border:1px solid var(--border);
     border-radius:10px;
-    background:#f9fbff;
+    background-color:#f9fbff;
     font-size:14px;
 }
 .consent input{margin-top:2px}
@@ -200,8 +200,10 @@ button[type="submit"]{
     transition: transform .05s ease, background-color .15s ease;
     box-shadow: 0 6px 18px rgba(30,64,175,.25);
 }
-button[type="submit"]:hover{background:var(--primary-600)}
+
+button[type="submit"]:hover{background-color:var(--primary-600)}
 button[type="submit"]:active{transform: translateY(1px)}
+
 .subcopy{
     font-size:13px;
     color:var(--muted);
@@ -233,12 +235,12 @@ button[type="submit"]:active{transform: translateY(1px)}
     font-weight:600;
 }
 .notice.error{
-    background:#fee2e2;
+    background-color:#fee2e2;
     color:#7f1d1d;
     border:1px solid #fecaca;
 }
 .notice.success{
-    background:#dcfce7;
+    background-color:#dcfce7;
     color:#14532d;
     border:1px solid #bbf7d0;
 }
